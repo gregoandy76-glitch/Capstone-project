@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Nutrition - Web App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <!-- LOGIN PAGE -->
+    <div id="login-page" class="landing-page">
+
+        <!-- NAVBAR -->
+        <nav class="landing-nav">
+            <div class="nav-brand">🥗 Smart Nutrition</div>
+            <div class="nav-login">
+                <input type="text" id="username" placeholder="Username" onkeydown="if(event.key==='Enter') login()">
+                <div class="nav-password-wrap">
+                    <input type="password" id="password" placeholder="Password" onkeydown="if(event.key==='Enter') login()">
+                    <button type="button" class="toggle-pw" onclick="togglePassword()">👁</button>
+                </div>
+                <button onclick="login()" class="btn-nav-login">Masuk →</button>
+            </div>
+        </nav>
+
+        <!-- HERO SECTION -->
+        <section class="hero-section">
+            <!-- Floating particles -->
+            <div class="particles">
+                <span></span><span></span><span></span> 
+                <span></span><span></span><span></span>
+            </div>
+            <div class="hero-badge">✨SMART NUTRITION✨</div>
+            <h1 class="hero-title">Kenali Kandungan <span class="highlight">Gula & Garam</span><br>di Setiap Produk Kemasan</h1>
+            <p class="hero-desc">
+                Smart Nutrition membantu kamu mendeteksi dan memantau kadar gula serta garam
+                dari setiap produk kemasan yang kamu konsumsi setiap hari — cukup dengan scan atau upload foto kemasan.
+            </p>
+            <div class="hero-cta">
+                <a href="#how" class="btn-hero-primary">Mulai Sekarang 🚀</a>
+                <a href="#features" class="btn-hero-outline">Pelajari Fitur ↓</a>
+            </div>
+        </section>
+
+        <!-- CARA KERJA SECTION -->
+        <section class="how-section" id="how">
+            <h2 class="section-title">Alur Kerja Web Smart Nutrition</h2>
+            <div class="how-grid">
+                <div class="how-card reveal">
+                    <div class="how-step">01</div>
+                    <div class="how-icon">📸</div>
+                    <h3>Upload Foto</h3>
+                    <p>Ambil foto atau upload gambar label nutrisi dari kemasan produk yang ingin kamu cek.</p>
+                    <div class="how-line"></div>
+                </div>
+                <div class="how-card reveal">
+                    <div class="how-step">02</div>
+                    <div class="how-icon">🧠</div>
+                    <h3>Analisis Otomatis</h3>
+                    <p>Sistem membaca kandungan gula dan garam lalu membandingkannya dengan batas harian WHO.</p>
+                    <div class="how-line"></div>
+                </div>
+                <div class="how-card reveal">
+                    <div class="how-step">03</div>
+                    <div class="how-icon">📊</div>
+                    <h3>Pantau Dashboard</h3>
+                    <p>Lihat ringkasan harian dan riwayat konsumsimu lewat grafik yang mudah dipahami.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURES SECTION -->
+        <section class="features-section" id="features">
+            <h2 class="section-title">Apa yang Bisa Smart Nutrition Lakukan?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📷</div>
+                    <h3>Scan Kemasan</h3>
+                    <p>Upload atau ambil foto label nutrisi pada kemasan produk makanan & minuman secara langsung.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3>Deteksi Otomatis</h3>
+                    <p>Sistem kami membaca dan menganalisis kandungan gula dan garam dari informasi nilai gizi pada kemasan.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚠️</div>
+                    <h3>Peringatan Dini</h3>
+                    <p>Dapatkan notifikasi peringatan jika asupan gula atau garam harianmu sudah mendekati batas aman WHO.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Dashboard Harian</h3>
+                    <p>Pantau riwayat konsumsi harianmu lewat grafik visual yang mudah dipahami dan informatif.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- STATS SECTION -->
+        <section class="stats-section">
+            <div class="stat-box reveal">
+                <span class="stat-num">50g</span>
+                <span class="stat-label">Batas Gula Harian</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-box reveal">
+                <span class="stat-num">2000mg</span>
+                <span class="stat-label">Batas Garam Harian</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-box reveal">
+                <span class="stat-num">Real-time</span>
+                <span class="stat-label">Analisis Kandungan</span>
+            </div>
+        </section>
+
+        <!-- QUOTE SECTION -->
+        <section class="quote-section reveal">
+            <div class="quote-card">
+                <div class="quote-top">
+                    <div class="quote-line"></div>
+                    <span class="quote-icon">&ldquo;</span>
+                    <div class="quote-line right"></div>
+                </div>
+                <p class="quote-text">
+                    Kesehatan bukan tentang angka di timbangan, tapi tentang
+                    <em>apa yang kamu masukkan ke dalam tubuhmu</em>
+                    setiap hari. Kenali nutrisimu, kendalikan hidupmu.
+                </p>
+                <div class="quote-footer">
+                    <div class="quote-dot"></div>
+                    <span class="quote-author">WHO Global Nutrition Report</span>
+                    <div class="quote-dot"></div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="landing-footer">
+            <p>© 2026 Smart Nutrition · Dibuat untuk hidup lebih sehat 💚</p>
+        </footer>
+    </div>
+
+    <!-- MAIN APP CONTAINER -->
+    <div id="app" class="hidden">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-brand">🥗 Smart Nutrition</div>
+            <nav>
+                <div class="nav-item active" onclick="showPage('home', this)">🏠 Beranda</div>
+                <div class="nav-item" onclick="showPage('scan', this)">📷 Upload</div>
+                <div class="nav-item" onclick="showPage('dashboard', this)">📊 Dashboard</div>
+            </nav>
+            <div class="sidebar-bottom">
+                <div class="user-chip">
+                    <div class="user-avatar" id="user-avatar">U</div>
+                    <span id="user-display">User</span>
+                </div>
+                <button class="btn-logout" onclick="logout()">
+                    <span class="logout-icon">⏻</span> Keluar
+                </button>
+            </div>
+        </aside>
+        <div class="sidebar-overlay" id="sidebar-overlay" onclick="closeSidebar()"></div>
+
+        <main class="main-content">
+            <!-- TOP BAR -->
+            <div class="topbar">
+                <div class="topbar-left">
+                    <button class="btn-hamburger" id="hamburger-btn" onclick="toggleSidebar()">
+                        <span></span><span></span><span></span>
+                    </button>
+                    <button class="btn-back" id="back-btn" onclick="goBack()">
+                        <span class="back-arrow">←</span>
+                        <span class="back-label">Kembali</span>
+                    </button>
+                </div>
+                <div class="topbar-right">
+                    <span class="topbar-title" id="topbar-title">Beranda</span>
+                </div>
+            </div>
+
+            <!-- HALAMAN BERANDA -->
+            <section id="home" class="page">
+                <div class="header-section">
+                    <h2>Halo, <span id="home-user-display">User</span>! 👋</h2>
+                    <p>Jangan lupa cek asupan gula dan garam hari ini, ya.</p>
+                </div>
+
+                <div class="dashboard-grid">
+                    <div class="card status-card">
+                        <h3>Status Saat Ini</h3>
+                        <div class="indicator-group">
+                            <span class="badge-waspada">WASPADA</span>
+                        </div>
+                        <p>Konsumsi gula kamu hampir mencapai batas harian.</p>
+                    </div>
+
+                    <div class="card quota-card">
+                        <h3>Sisa Kuota Harian</h3>
+                        <div class="quota-item">
+                            <div class="quota-info"><span>Gula</span> <strong>15g / 50g</strong></div>
+                            <div class="bar-container">
+                                <div class="bar red" style="width: 70%;"></div>
+                            </div>
+                        </div>
+                        <div class="quota-item">
+                            <div class="quota-info"><span>Garam</span> <strong>1600mg / 2000mg</strong></div>
+                            <div class="bar-container">
+                                <div class="bar blue" style="width: 20%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- HALAMAN UPLOAD & SCAN -->
+            <section id="scan" class="page hidden">
+                <div id="upload-screen">
+                    <div class="card">
+                        <h3>Upload & Analisis Produk</h3>
+                        <div class="form-group">
+                            <label>Nama Produk</label>
+                            <input type="text" id="prod-name-input" placeholder="Contoh: Nutella, Oreo, dll.">
+                        </div>
+
+                        <div class="upload-grid">
+                            <!-- Opsi Kamera -->
+                            <div class="method-box" id="cam-box" onclick="startCamera()">
+                                <div class="icon">📷</div>
+                                <video id="webcam" autoplay playsinline class="hidden"></video>
+                                <p id="cam-text">Gunakan Kamera</p>
+                                <button id="cam-clear" class="btn-clear hidden" onclick="clearCamera(event)">✕ Hapus</button>
+                            </div>
+
+                            <!-- Opsi File -->
+                            <div class="method-box" id="file-box" onclick="document.getElementById('file-input').click()">
+                                <div class="icon" id="file-icon">📁</div>
+                                <input type="file" id="file-input" class="hidden" accept="image/*"
+                                    onchange="handleFile(event)">
+                                <img id="file-preview" class="hidden" alt="Preview">
+                                <p id="file-display">Pilih dari Galeri</p>
+                                <button id="file-clear" class="btn-clear hidden" onclick="clearFile(event)">✕ Hapus</button>
+                            </div>
+                        </div>
+                        <button onclick="analyzeProduct()" class="btn-primary mt-20">Analisis Kandungan</button>
+                    </div>
+                </div>
+
+                <!-- DETAIL HASIL (Sesuai Figma) -->
+                <div id="detail-screen" class="hidden">
+                    <div class="card">
+                        <button class="btn-back-inline" onclick="resetUpload()">&#8592; Kembali Upload</button>
+                        <div class="detail-header">
+                            <h2 id="final-prod-name">Nama Produk</h2>
+                            <p>7 Mei 2026, 16:45</p>
+                        </div>
+
+                        <div class="stat-grid">
+                            <div class="stat-item">
+                                <p>Gula: <strong>35g / 50g</strong></p>
+                                <small class="danger">Hampir Batas!</small>
+                            </div>
+                            <div class="stat-item">
+                                <p>Garam: <strong>400mg / 2000mg</strong></p>
+                                <small class="safe">Masih Aman</small>
+                            </div>
+                        </div>
+
+                        <div class="warning-box sugar">
+                            <h4>⚠️ PERINGATAN GULA</h4>
+                            <p>Kadar gula produk ini melebihi batas harian profil kesehatan.</p>
+                            <div class="progress-wrap">
+                                <div class="progress red" style="width: 70%;"></div>
+                            </div>
+                            <small>Kuota Harian Terpakai: 70%</small>
+                        </div>
+
+                        <div class="btn-group">
+                            <button onclick="saveAndGo()" class="btn-save">SIMPAN KE RIWAYAT</button>
+                            <button onclick="resetUpload()" class="btn-outline">SCAN ULANG</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- HALAMAN DASHBOARD -->
+            <section id="dashboard" class="page hidden">
+                <div class="dashboard-container">
+                    <div class="card chart-card">
+                        <h3>Dashboard Harian</h3>
+                        <div class="chart-wrapper">
+                            <canvas id="dailyChart"></canvas>
+                            <div class="chart-overlay">
+                                <p>Terpakai</p>
+                                <span class="badge-waspada">WASPADA</span>
+                            </div>
+                        </div>
+                        <div class="legend-list">
+                            <p><span class="dot red"></span> Gula: 70%</p>
+                            <p><span class="dot blue"></span> Garam: 20%</p>
+                            <p><span class="dot gray"></span> Sisa Kuota</p>
+                        </div>
+                    </div>
+
+                    <div class="card table-card">
+                        <h4>Riwayat Terakhir</h4>
+                        <table id="history-table">
+                            <thead>
+                                <tr>
+                                    <th>Waktu</th>
+                                    <th>Nama Produk</th>
+                                    <th>Gula</th>
+                                    <th>Garam</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Data Otomatis -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
